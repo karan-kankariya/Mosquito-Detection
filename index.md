@@ -1,37 +1,17 @@
-## Welcome to GitHub Pages
+# Mosquito Detection
 
-You can use the [editor on GitHub](https://github.com/karan-kankariya/Mosquito-Detection/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Introduction & Problem Statement
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Mosquitoes are one of the leading killers of humans, killing over one million people a year. Identifying and detecting them can go a long way in eliminating mosquitoes. By leveraging a convolutional neural network, we hope to distinguish mosquitoes from other insects.
 
-### Markdown
+## Data
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+I gathered insect images from various sources, including kaggle, a research university in France, and the US department of agriculture. There was a lot of manual work that had to be done to crop the images and retain the best possible image quality.
 
-```markdown
-Syntax highlighted code block
+## Model
 
-# Header 1
-## Header 2
-### Header 3
+I converted the images to matrices and then used data augmentation. This was done to prevent overfitting and help the model generalize to new data and because of a small initial dataset.
 
-- Bulleted
-- List
+## Conclusion and Todo
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/karan-kankariya/Mosquito-Detection/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+The results were better than I expected with a validation accuracy score 0.84 on the best model. A lot more fine tuning can be done to improve the model. Next todo is to process and analyze video to detect mosquitoes.
